@@ -1,0 +1,32 @@
+SQLAlchemy Expression Language Query into Pandas
+
+select = [
+    Measurement.date.label('Date'), 
+    func.sum(Measurement.prcp.label('Precipitation')), 
+    func.avg(Measurement.tobs.label('Temperature'))
+]
+
+results = session.query(
+    *select
+).filter(
+    Measurement.station == Station.station
+).group_by(
+    Measurement.date
+).filter(
+    Measurement.date >= '2016-08-23'
+).all()
+
+dates = [result[0] for result in results],
+precips = [result[1] for result in results],
+temp = [result[2] for result in results]
+
+results_dict = {
+    'Date': dates,
+    'Temperature': temp,
+    'Precipitation': precips
+    
+}
+
+year = round(pd.DataFrame(results_dict), 2)
+year['Date'] = pd.to_datetime(year['Date'])
+year.head()
