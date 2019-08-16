@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>WeatherPy - Comparisons</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    
+</head>
+
+<body>
+
+    <div class='navbar' style='font-size:22px;'>                          
+        <ul>
+            <li><a href='#' style="float:left;" id='homeButtonPadding'>WeatherPy</a></li>
+            <li><a href='#' style='float:right;'>COMPARISON</a></li>
+            <li><a href='#' style='float:right;'>DATA</a></li>
+            <li class='dropdown' style='float:right'>
+                <a href='javascript:void(0)' class='dropbtn'>PLOTS</a>
+                <div class='dropdown-content'>
+                    <a href='http://www.cnn.com'>Max Temperature</a>
+                    <a href='#'>Humidity</a>
+                    <a href='#'>Cloudiness</a>
+                    <a href='#'>Wind Speed</a>
+                </div>
+            </li>
+        </ul>
+    </div>          
+        
+  
+<div class="container-fluid">    
+    
+    <div class='row'>
+
+        <div class='col-sm-1 col-md-1 col-lg-1'>
+        </div>
+            
+        <div class='col-sm-10 col-md-10 col-lg-10' id='columnParams'>
+            
+            <div class='row'>
+                <div class='col-lg-12' style='padding-bottom: 25px;'>
+                    <img src='Images/title_strip.PNG' class='img-responsive center-block' alt='Responsive image'>
+                    <p style='font-size: 18px;'>
+                        <br>
+                        <br/>
+                        Intuitively, we can say that as you get closer to the equator, the temperature will rise.
+                        But how can you be absolutely certain? Or atleast as close to certain as possible?  This project,
+                        a static dashboard website, aims to give some level of certainty to this question. 
+                        <br>
+                        <br/>                        
+                        Through the use of the <a href='http://openweathermap.org'>OpenWeatherMap</a> API 3500+ randomly 
+                        collected cities real-time temperature data was collected, cleaned and visualized to give the 
+                        reader a clearer understanding of the relationship between a cities latitude and and it's weather.
+                    </p>
+                </div>
+            </div>
+            
+            <div class='row'>
+            
+                <div class="col-md-6">
+                    <div class='plotBackgrounds'>
+                        <h1 id='rowBorder'>Global Temperatures</h1>
+                        <img id='leftPlot' src='Images/WeatherPy - Global Temperature.png' class='img-responsive center-block' alt='Responsive image'>
+                    </div>            
+                </div>
+                                        
+                <div class="col-md-5">
+                    <div class='plotBackgrounds'>
+                        <h2 id='rowBorder'>Visualizations</h2>
+                        <img id='rightPlot' src='Images/Latitude ~ Quads.png' class='img-responsive center-block' alt='Responsive image'>
+                    </div>                       
+                </div>
+            
+            </div>
+                
+        </div>
+            
+        <div class='col-sm-1 col-md-1 col-lg-1'>
+        </div>
+
+    </div>
+        
+  
+</div>
+
+</body>
+</html>
