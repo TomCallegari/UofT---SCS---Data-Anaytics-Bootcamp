@@ -25,7 +25,6 @@ ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  overflow: hidden;
   background-color: #2a3439;
 }
 
@@ -45,6 +44,7 @@ li a:hover, .dropdown:hover .dropbtn {
 
 li.dropdown {
   display: inline-block;
+  overflow: visible;
 }
 
 .dropdown-content {
