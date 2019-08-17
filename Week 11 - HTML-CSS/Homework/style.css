@@ -1,6 +1,6 @@
 
 body {
-    background-color: #2a3439;
+    background-color: #ffffff;
     font-family: Futura, Trebuchet MS, Arial, sans-serif;
 }
 
@@ -20,6 +20,12 @@ a:active {
   text-decoration: none;
 }
 
+.navbar {
+  border-color: #ffffff;
+  border-width: 1.5px;
+  font-size: 22px;
+  background-color: #2a3439;
+}
 
 ul {
   list-style-type: none;
@@ -48,6 +54,7 @@ li.dropdown {
 }
 
 .dropdown-content {
+  font-size: 15px;
   display: none;
   position: absolute;
   background-color: #f9f9f9;
@@ -72,10 +79,6 @@ li.dropdown {
 .dropdown:hover .dropdown-content {
   display: block;
 }
-
-
-
-
 
 #leftPlot {
   height: 100%;
@@ -119,4 +122,8 @@ h3 {
   border-left-style: none;
   border-top-style: none;
   text-align: center;
+}
+
+#tableBackground {
+  background-color: #ffffff;
 }
