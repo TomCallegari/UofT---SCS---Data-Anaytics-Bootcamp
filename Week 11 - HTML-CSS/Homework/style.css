@@ -80,6 +80,28 @@ li.dropdown {
   display: block;
 }
 
+
+.table-fixed thead {
+  width: 97%;
+}
+.table-fixed tbody {
+  height: 500px;
+  overflow-y: auto;
+  width: 100%;
+}
+.table-fixed thead, .table-fixed tbody, .table-fixed tr, .table-fixed td, .table-fixed th {
+  display: block;
+}
+.table-fixed tbody td, .table-fixed thead > tr> th {
+  float: left;
+  border-bottom-width: 0;
+}
+
+
+
+
+
+
 #leftPlot {
   height: 100%;
   width: 100%;
@@ -122,8 +144,4 @@ h3 {
   border-left-style: none;
   border-top-style: none;
   text-align: center;
-}
-
-#tableBackground {
-  background-color: #ffffff;
 }

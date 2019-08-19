@@ -16,9 +16,9 @@
 
     <div class='navbar' style='font-size:22px;'>                          
         <ul>
-            <li><a href='#' style="float:left;" id='homeButtonPadding'>WeatherPy</a></li>
+            <li><a href='index.html' style="float:left;" id='homeButtonPadding'>WeatherPy</a></li>
             <li><a href='#' style='float:right;'>COMPARISON</a></li>
-            <li><a href='#' style='float:right;'>DATA</a></li>
+            <li><a href='data.html' style='float:right;'>DATA</a></li>
             <li class='dropdown' style='float:right'>
                 <a href='javascript:void(0)' class='dropbtn'>PLOTS</a>
                 <div class='dropdown-content'>
@@ -37,8 +37,11 @@
         </div>
 
         <div class='col-md-6'>
-          <div style='overflow-x:auto;' id='tableBackground'>
-                <table class="dataframe table-bordered table-striped table-hover" style='background-color: #ffffff;'>
+          <div class='panel panel-default'>
+            <div class='panel-heading'>
+              <h4 style='text-align: center;'>OpenWeahterMap.org Data</h4>
+            </div>
+                <table class="table table-fixed" style='background-color: #ffffff;'>
                     <thead>
                       <tr style="text-align: right;">
                         <th></th>
@@ -50108,6 +50111,7 @@
                       </tr>
                     </tbody>
                   </table>
+                
                 </div>
 
                 <div class='col-md-3'>
