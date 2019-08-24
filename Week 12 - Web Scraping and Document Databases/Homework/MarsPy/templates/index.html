@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mars Data Scraper</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
+</head>
+
+<body>
+    <div  class='container-fluid'>
+
+        <div class='row'>
+            <div class='col-md-1'>
+            </div>
+            <div class='col-md-10'>
+
+                <div class='row'> <!---Row 1: Jumbotron-->
+
+                    <div class='jumbotron text-center' id='jumbotronFormat'>
+                        <h1 id='h1Format'>Latest Mars News and Info</h1>                        
+                        <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Get Data!</a></p>
+                        <br/>                        
+                    </div> 
+
+                </div>
+
+                <div class='row newsBox'> <!---Row 2: Most Recent News Item-->                    
+
+                        <div class='row'>
+                            <div class='col-md-10'>
+                                <h1>{{ date }}</h1>
+                            </div>
+                        </div>
+            
+                        <div class='row'>
+                            <div class='col-md-10'>
+                                <h3>{{ title }}</h3>
+                                <br/>
+                                <p>{{ teaser }}</p>
+                            </div>
+                        </div>                     
+
+                </div>
+                
+                <div class='row'> <!---Row 3: Featured Image / Weather Report / Data Table-->
+
+                    <div class='col-md-6'>
+
+                        <div class='row newsBox' id='imageRow'>
+                             <h2>Featured Mars Image - {{ image_title }}</h2>                        
+                            <br/>                        
+                            <img src='{{ image_jpg }} 'id='featuredImage'>
+                        </div>
+
+                    </div>
+                    <div class='col-md-4'>
+                        <div class='row newsBox' id='weatherBox'>
+
+                            <h2>Current Weather on Mars</h2>
+                            <br/>
+                            <p> {{ weather_text }} </p>
+
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class='row'> <!---Row 4: Mars Hemispheres-->
+
+                   <div class='col-md-6'>
+
+                        <h2 class='newsBox'>Mars Hemispheres</h2>
+                        <div class='row' id='row'>
+                             <div class='column'>
+                                 <a href='{{ hemisphere_1 }}'>
+                                     <img src='{{ hemisphere_1 }}' alt='Responsive image' class='newsBox'>
+                                 </a>
+                                 <a href='{{ hemisphere_2 }}'>
+                                     <img src='{{ hemisphere_2 }}' alt='Responsive image' class='newsBox'>
+                                 </a>
+                             </div>
+                             <div class='column'>
+                                     <a href='{{ hemisphere_3 }}'>
+                                         <img src='{{ hemisphere_3 }}' alt='Responsive image' class='newsBox'>
+                                 </a>
+                                 <a href='{{ hemisphere_4 }}'>
+                                     <img src='{{ hemisphere_4 }}' alt='Responsive image' 
+                                     class='newsBox'>
+                                 </a>
+                             </div>
+                         </div>
+                   </div>
+
+                   <div class='col-md-4'>
+
+                        <div class='row newsBox'>
+                            <h2>Mars Facts</h2>
+                            <br/>
+                            <table id='stats'>{{ mars_facts | safe }} </table>    
+                        </div>
+
+                   </div>
+                </div>
+
+                <div class='row'> <!---Row 5: Footer-->
+                    <footer>
+                        <p>
+                            <a href='http://www.jpl.nasa.gov/spaceimages/?search=&category=Mars'>JPL</a>
+                            <a href='http://mars.nasa.gov/news/'>NASA: Mars News</a>
+                            <a href='https://twitter.com/marswxreport?lang=en'>Twitter: Mars Weather Report</a>
+                            <a href='https://astrogeology.usgs.gov/search/results?q=hemisphere+enhanced&k1=target&v1=Mars'>astrogeology.usgs.gov</a>
+                        </p>
+                    </footer>
+                </div>
+
+            </div>
+            <div class='col-md-1'>
+            </div>
+        </div>
+    </div>
+</body>

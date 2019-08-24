@@ -1,0 +1,43 @@
+def scrape_info():
+    news_browser = init_browser()
+    
+    # Mars news
+    news_url = 'https://mars.nasa.gov/news/?page=0&per_page=40&order=publish_date+desc%2Ccreated_at+desc&search=&category=19%2C165%2C184%2C204&blank_scope=Latest'
+    news_browser.visit(news_url)
+    
+    news_html = news_browser.html
+    news_soup = bs(news_html, 'html.parser')
+    
+    news_date = news_soup.find('ul', class_='item_list').find('div', class_='list_date').text
+    news_title = news_soup.find('ul', class_='item_list').find('div', class_='content_title').text
+    news_teaser = news_soup.find('ul', class_='item_list').find('div', class_='article_teaser_body').text
+    
+    news_browser.quit()
+    
+    # Featured Image
+    image_browser = init_browser()
+    
+    image_url = 'https://www.jpl.nasa.gov/spaceimages/?search=&category=Mars'
+    image_browser.visit(image_url)
+    
+    image_html = image_browser.html
+    image_soup = bs(image_html, 'html.parser')
+    
+    image_jpg = image_soup.find('ul', class_='articles').find('img', class_='thumb')['src']
+    image_title = image_soup.find('ul', class_='articles').find('div', class_='item_tease_overlay').text    
+    
+    image_browser.quit()
+        
+    # Main dict to return    
+    mars_dict = {
+        'date': news_date,
+        'title': news_title,
+        'teaser': news_teaser,
+        'image_jpg': image_jpg,
+        'image_title': image_title
+    }
+    
+    return mars_dict
+    
+    return news_dict
+
