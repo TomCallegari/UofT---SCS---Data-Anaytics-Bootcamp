@@ -1,0 +1,127 @@
+* {box-sizing: border-box;}
+
+body { 
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #2a3439;
+  background-color: #C0C0C0;
+}
+
+.header {
+  overflow: hidden;
+  background-color: #ffffff;
+  padding: 20px 10px;
+}
+
+.header a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 12px;
+  text-decoration: none;
+  font-size: 18px; 
+  line-height: 25px;
+  border-radius: 4px;
+}
+
+.header a.logo {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.header a:hover {
+  background-color: #2a3439;
+  color: #FFFFFF;
+}
+
+.header a.active {
+  background-color: #2a3439;
+  color: white;
+}
+
+.header-right {
+  float: right;
+}
+
+@media screen and (max-width: 500px) {
+  .header a {
+    float: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .header-right {
+    float: none;
+  }
+}
+
+#mainCard {
+  margin-left: 5vw;
+  margin-right: 5vw;
+  margin-top: .75vw;
+  padding-left: 10px;
+  padding-right:10px;
+  padding-top: 10px;
+  padding-bottom: 60px;
+  background-color: #ffffff;
+  height: 80%;
+  box-shadow: 5px 10px #2a3439;
+}
+
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #2a3439;
+  color: white;
+  text-align: center;
+  height: 30px;
+}
+
+#infoLinks {
+  position: absolute;
+  right: 5vw;
+  height: 40vw;
+  width: 20vw;
+  margin-right: 2vw;
+  margin-top: 5vw;
+}
+
+#paragraph {
+  position: absolute;
+  left: 100px;
+  border-color: #2a3439 #FFFFFF;
+  height: 325px;
+  width: 30vw;
+}
+
+#image {
+  width: 95%;
+}
+
+#listLink {
+  text-decoration: none;
+  color: #2a3439;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+
+#teamMember {
+  text-decoration: none;
+  color: #2a3439;
+}
+
+#linkedIn {
+  width: 15%;
+}
+
+.infoLinks a:hover {
+  background-color: #2a3439;
+  color: #FFFFFF;
+}

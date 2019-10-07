@@ -1,0 +1,111 @@
+<DOCTYPE html>
+    <html lang='en'>
+
+        <!---HEAD-->
+        <head>
+            <title>Project 3 - Worldwide Emissions, Agriculture and Population</title>
+            <meta charset='utf-8'>
+            <meta name="viewport" content="width=device-width, initial-scale=1">
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+            <link rel="stylesheet" href="style.css">
+        </head>
+
+        <!--BODY-->
+        <body>
+
+            <!--HEADER-->
+            <div class="header">
+                <a href="index.html" class="logo">Project 3</a>
+                <div class="header-right">
+                  <a class="active" href="index.html">Main</a>
+                  <a href="leaflet.html">Leaflet</a>
+                  <a href="dashboard.html">Summary Dashboard</a>
+                </div>
+            </div>
+
+            <!-- BOOTSTRAP MIDDLE ELEMENT ROW -->
+            <div class='row'>
+                <div id='col-md-12'>
+
+                    <!--CENTER CARD-->
+                    <div id='mainCard'>
+
+                        <div class='row' style='padding-left: 25px;'>
+                            <h1 style='font-size:3vw; text-align: center; color: #2a3439;'><b>Global Population, Emissions and Agricultural Growth</b></h1>
+                        </div>
+
+                        <div class='row'>
+
+                            <!--PROJECT INTRODUCTION-->
+                            <div class='col-md-9' style='max-width: 100%'>
+                                <div id='paragraph'>
+                                    <p class='card-text' style='font-size:1vw; text-align: center; padding-top:6vw;'>
+                                        
+                                        In its Fifth Assessment Report, the Intergovernmental Panel on Climate Change, a 
+                                        group of 1,300 independent scientific experts from countries all over the world 
+                                        under the auspices of the United Nations, concluded there's a more than 95 percent 
+                                        probability that human activities over the past 50 years have warmed our planet.” 
+                                        <a href='https://climate.nasa.gov/causes/'>NASA</a>. 
+
+                                        <br>
+                                        
+                                        Palatable visualizations are thought provoking and self-explanatory, instigating us 
+                                        to do our best to save our planet for the next generation. 
+                                        
+                                        To investigate the above claim we used data wrangling in Python and visualization tools 
+                                        in Javascript (Leaflet, Plotly), investigating the biggest contributors to greenhouse gas 
+                                        emissions between the years 2000 - 2017.  We chose the two most basic human activities; 
+                                        farming and population growth to collect data across countries. Official data was collected 
+                                        from FAO.com which was normalized and stored in SQL database for further processing. To 
+                                        uncover trend and co-relation between greenhouse gases (Methane, nitrous oxide & carbon 
+                                        dioxide) increased farming output and population growth. This project used JavaScript, HTML/CSS
+                                        and Leaflet to create interactive visualizations and Github to host our data.  
+                                    </p>
+                                </div>
+                            </div>
+
+                            <!--PROJECT LINKS-->
+                            <div class='col-md-3'>
+                                <div id='infoLinks'>
+
+                                    <br>
+
+                                    <a href='http://www.fao.org/faostat/en/#data' id='listLink'><h2 style='font-size:1.5vw; text-align:center'><b>Data</b></h2>
+                                    <img id='image' src='fao.png' alt='FAO logo' class='center'></a>
+
+                                    <br>
+
+                                    <a href='https://github.com/cebulada/Project-2' id='listLink'><h2 style='font-size:1.5vw; text-align:center'><b>Project Repo</b></h2>
+                                    <img id='image' src='github_logo.png' alt='Github Logo' style='width: 70%' class='center'></a>
+                                        
+                                    <br>
+
+                                    <h2 style='font-size:1.5vw; text-align:center'><b>Team Members</b></h2>
+                                    <a href='https://www.linkedin.com/in/daniel-cebula-b098b3a3/' id='teamMember'><h3 style='font-size:1vw; text-align:center'><b>Daniel Cebula</h3></b></a>
+                                    <a href='https://www.linkedin.com/in/williamlim457/' id='teamMember'><h3 style='font-size:1vw; text-align:center'><b>William Lim</h3></b></a>
+                                    <a href='https://www.linkedin.com/in/tomcallegari/' id='teamMember'><h3 style='font-size:1vw; text-align:center'><b>Tom Callegari</h3></b></a>
+                                    <a href='https://www.linkedin.com/in/rohanchaudhari/' id='teamMember'><h3 style='font-size:1vw; text-align:center'><b>Rohan Chaudhari</h3></b></a>
+
+                                    <br>                                
+                                
+                                </div> 
+                            </div>     
+                        </div>
+
+                    </div>
+                    
+
+                </div>
+            </div>
+
+            <!--FOOTER-->
+            <div class='footer'>
+                <p>Group Project 3 (Plotly, Leaflet, Flask)  
+                    <a id='goldFont' href='https://bootcamp.learn.utoronto.ca/data/landing/?s=Google-Unbranded&pkw=%2Bdata%20%2Banalytics%20%2Bboot%20%2Bcamp&pcrid=378030869017&pmt=b&utm_source=google&utm_medium=cpc&utm_campaign=%5BS%5D_GRD_Data_NonBrand_ALL_Data_Analytics_Tier1_BMM&utm_term=%2Bdata%20%2Banalytics%20%2Bboot%20%2Bcamp&utm_content=378030869017&s=google&k=%2Bdata%20%2Banalytics%20%2Bboot%20%2Bcamp&&77534784899_kwd-332404801636__378030869017_g_c___dc&pkw=%2Bdata%20%2Banalytics%20%2Bboot%20%2Bcamp&pcrid=378030869017&pmt=b&utm_source=google&utm_medium=cpc&utm_campaign=&utm_term=%2Bdata%20%2Banalytics%20%2Bboot%20%2Bcamp&utm_content=378030869017&s=google&k=%2Bdata%20%2Banalytics%20%2Bboot%20%2Bcamp&gclid=CjwKCAjw7uPqBRBlEiwAYDsr1z4xcG_dsjnksEiQ4V1xMo7ljTN7xYoFlmzE2-oJSSAWtY_X1yYnMRoCi5QQAvD_BwE&gclsrc=aw.ds'>
+                    U of T School of Continuing Studies, Data Analytics Bootcamp</a> - 2019
+                </p>
+            </div>
+
+        </body>
+    </html>
+</DOCTYPE>
